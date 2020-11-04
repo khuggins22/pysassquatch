@@ -1,0 +1,80 @@
+QWidget {
+        font-family: 'Montserrat';
+}
+
+QWidget[type="background"] {
+        background-color: #1A659E;
+}
+
+QLabel[type="title"] {
+    font-size: 32pt;
+}
+
+QLabel[type="header"] {
+    font-size: 20pt;
+}
+
+QPushButton[type="cancel"] {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: #d9534f;
+    color: #d9534f;
+    font: bold;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton[type="cancel"]:pressed {
+    background-color: #bf4945;
+    border-color: #bf4945;
+    border-style: inset;
+    color: #ffffff;
+}
+
+QLabel {
+    font: 14pt 'Montserrat';
+    color: #ffffff;
+}
+
+QLabel[type="error"] {
+    color: #d9534f;
+}
+
+QLabel[type="light"] {
+    color: #ffffff;
+}
+
+QPushButton {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: #008ac4;
+    background-color: #3fbaf7;
+    color: #ffffff;
+    font: bold 14pt;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: #008ac4;
+    border-style: inset;
+}
+
+QTabBar::tab {
+    font: bold 14pt;
+    color: #ffffff;
+    border: 3px solid #5892cf;
+    background: #5892cf;
+    min-width: 8em;
+    padding: 8px;
+}
+
+QTabBar::tab:selected {
+    border-image: url(img/bottom_border_highlight.png);
+}
+
+QTabWidget::tab-bar {
+    min-width: 1000;
+}

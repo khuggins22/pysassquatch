@@ -1,0 +1,96 @@
+@primary_color: #1A659E
+@primary_color_dark: #003b6f
+@primary_color_light: #5892cf
+@secondary_color: #3fbaf7
+@secondary_color_dark: #008ac4
+@secondary_color_light: #7fecff
+@error_color: #d9534f
+@error_color_dark: #bf4945
+@text_light: #ffffff
+@text_dark: #000000
+@font_family: 'Montserrat'
+@font_title: 32pt
+@font_header: 20pt
+@font_main: 14pt
+@tab_border_image: img/bottom_border_highlight.png
+
+QWidget {
+        font-family: @font_family;
+}
+
+QWidget[type="background"] {
+        background-color: @primary_color;
+}
+
+QLabel[type="title"] {
+    font-size: @font_title;
+}
+
+QLabel[type="header"] {
+    font-size: @font_header;
+}
+
+QPushButton[type="cancel"] {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: @error_color;
+    color: @error_color;
+    font: bold;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton[type="cancel"]:pressed {
+    background-color: @error_color_dark;
+    border-color: @error_color_dark;
+    border-style: inset;
+    color: @text_light;
+}
+
+QLabel {
+    font: @font_main @font_family;
+    color: @text_light;
+}
+
+QLabel[type="error"] {
+    color: @error_color;
+}
+
+QLabel[type="light"] {
+    color: @text_light;
+}
+
+QPushButton {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: @secondary_color_dark;
+    background-color: @secondary_color;
+    color: @text_light;
+    font: bold @font_main;
+    min-width: 10em;
+    padding: 6px;
+}
+
+QPushButton:pressed {
+    background-color: @secondary_color_dark;
+    border-style: inset;
+}
+
+QTabBar::tab {
+    font: bold @font_main;
+    color: @text_light;
+    border: 3px solid @primary_color_light;
+    background: @primary_color_light;
+    min-width: 8em;
+    padding: 8px;
+}
+
+QTabBar::tab:selected {
+    border-image: url(@tab_border_image);
+}
+
+QTabWidget::tab-bar {
+    min-width: 1000;
+}
